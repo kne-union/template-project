@@ -69,3 +69,9 @@ fetchPreset({
         return response;
     }
 });
+
+export const globalPreset = {
+    ajax, themeToken: {
+        colorPrimary: '#4F185A', colorPrimaryHover: '#702280'
+    }
+};

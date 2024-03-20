@@ -1,8 +1,8 @@
 # <%=name%>
 
-<%=description||''>
+<%=description||''%>
 
-[更多文档](https://www.kne-union.top/#/components)
+[项目基于Kne-Union remote-components](https://www.kne-union.top/#/components)
 
 开始:
 
