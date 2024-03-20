@@ -1,0 +1,36 @@
+{
+  "name": "@kne-template/project",
+  "version": "0.1.0",
+  "description": "使用@kne/npm-tools初始化一个业务项目",
+  "scripts": {
+    "init": "husky",
+    "build:md": "npx @kne/md-doc",
+    "start:md": "npx @kne/md-doc --watch",
+    "prettier": "prettier --config .prettierrc --write '{libs/**/*,index}.{js,jsx,ts,tsx,json,css,scss}'",
+    "lint-staged": "npx lint-staged"
+  },
+  "lint-staged": {
+    "{libs/**/*,index}.{js,jsx,ts,tsx,json,css,scss}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "files": [
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kne-union/template-project.git"
+  },
+  "keywords": ["template"],
+  "author": "linzp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kne-union/template-project/issues"
+  },
+  "homepage": "https://github.com/kne-union/template-project#readme",
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5"
+  }
+}
