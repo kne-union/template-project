@@ -76,7 +76,7 @@
     "http-proxy-middleware": "^2.0.6",
     "husky": "^9.0.11",
     "lodash": "^4.17.21",
-    "node-sass": "^9.0.0",
+    "sass": "^1.75.0",
     "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
