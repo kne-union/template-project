@@ -1,6 +1,6 @@
 {
   "name": "@kne-template/project",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "使用@kne/npm-tools初始化一个业务项目.",
   "scripts": {
     "init": "husky",

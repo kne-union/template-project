@@ -4,7 +4,7 @@
   "description": "<%=description%>",
   "scripts": {
     "init": "husky",
-    "start": "cross-env PORT=3010 MODULES_DEV_PUBLIC_URL=/<%=name%> craco start",
+    "start": "cross-env PORT=3010 MODULES_DEV_PUBLIC_URL=/ craco start",
     "build": "cross-env COMPONENTS_NAME=<%=name%> MODULES_DEV_PUBLIC_URL=/<%=name%> craco build",
     "create": "modules-dev-create",
     "test": "craco test --coverage",
