@@ -1,12 +1,11 @@
 import {Routes, Route, Navigate} from "react-router-dom";
 import pages from './pages';
 import MainLayout from './MainLayout';
-import {globalPreset} from "./preset";
 import './index.scss';
 
 const {Home, Error, NotFound} = pages;
 
-const App = () => {
+const App = ({globalPreset}) => {
     return <Routes>
         <Route path='/' element={<MainLayout preset={globalPreset} themeToken={globalPreset.themeToken} paths={[]}/>}>
             <Route index element={<Home/>}/>

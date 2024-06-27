@@ -1,17 +1,24 @@
-import {HashRouter} from "react-router-dom";
-import {globalPreset} from "./preset";
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
+import { BrowserRouter } from 'react-router-dom';
+import { globalInit } from './preset';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+const renderRoot = async App => {
+    const globalPreset = await globalInit();
+    root.render(
+        <BrowserRouter>
+            <App themeToken={globalPreset.themeToken} globalPreset={globalPreset} />
+        </BrowserRouter>
+    );
+};
 
 if (process.env.NODE_ENV === 'development') {
     import('@kne/modules-dev/dist/create-entry.css');
     import('@kne/modules-dev/dist/create-entry').then(module => {
-        const Entry = module.default(App);
-        root.render(<HashRouter><Entry preset={globalPreset} themeToken={globalPreset.themeToken}/></HashRouter>);
+        renderRoot(module.default(({ globalPreset }) => <App globalPreset={globalPreset} />));
     });
 } else {
-    root.render(<HashRouter><App/></HashRouter>);
+    renderRoot(App);
 }
